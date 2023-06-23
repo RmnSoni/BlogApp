@@ -13,13 +13,13 @@ function Header() {
     }
 
     return (
-        <header className=" bg-gray-800 text-white p-2 item-center text-2xl" >
-            <Link to="/">
-                <img src='https://picsum.photos/30' alt="Kushal's profile" className=' rounded-full inline' />
-                <h1 className='inline font-semibold'> Kushal Soni</h1>
+        <header className=" bg-gray-800 text-white pt-2 sm:pb-1 item-center text-2xl" >
+            <Link to="/" className='inline-flex'>
+                <img src='https://picsum.photos/30' alt="Kushal's profile" className=' rounded-full inline mx-2'/>
+                <h1 className='inline font-semibold '> Kushal Soni</h1>
             </Link>
 
-            <button onClick={toggleMenu} className='sm:hidden absolute right-0 m-2 inline'>
+            <button onClick={toggleMenu} className='sm:hidden absolute right-0 mx-2 my-1 inline'>
                 {showHam ? <IoMdClose /> : <GiHamburgerMenu />}
             </button>
 
