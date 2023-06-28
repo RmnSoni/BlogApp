@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { IoMdClose } from 'react-icons/io';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
-
-
+import logo from '../assets/profile32x32.png'
 
 function Header() {
     const [showHam, setShowHam] = useState(false);
@@ -13,41 +12,27 @@ function Header() {
     }
 
     return (
-        <header className=" bg-gray-800 text-white pt-2 sm:pb-1 item-center text-2xl" >
-            <Link to="/" className='inline-flex'>
-                <img src='https://picsum.photos/30' alt="Kushal's profile" className=' rounded-full inline mx-2'/>
-                <h1 className='inline font-semibold '> Kushal Soni</h1>
+        <header className="App-header" >
+            <Link to="/" className='home-button inline-flex'>
+                <img src={logo} alt="Kushal's profile" className=''/>
+                <h1 className=''> Kushal Soni</h1>
             </Link>
-
-            <button onClick={toggleMenu} className='sm:hidden absolute right-0 mx-2 my-1 inline'>
+            <button onClick={toggleMenu} className='header-ham'>
                 {showHam ? <IoMdClose /> : <GiHamburgerMenu />}
             </button>
-
             {showHam &&
-                <div className=' text-center'>
+                <div className='smDrop text-center'>
+                    <p><Link to="/blogs" onClick={toggleMenu} className='header-button '>Blog</Link></p>
+                    <p><Link to="/about" onClick={toggleMenu} className='header-button '>About</Link></p>
+                    <p><Link to="/contact" onClick={toggleMenu}  className='header-button'>Contact</Link></p>
+                </div>
+            }
 
-                    <p><Link to="/blogs" className='m-2 px-1 hover:bg-gray-200 hover:bg-opacity-20 rounded-md '>
-                        Blogs</Link></p>
-
-                    <p><Link to="/about" className='m-2 px-1 hover:bg-gray-200 hover:bg-opacity-20 rounded-md '>
-                        About</Link></p>
-
-                    <p><Link to="/contact" className='m-2 px-1 hover:bg-gray-200 hover:bg-opacity-20 rounded-md '>
-                        Contact</Link></p>
-                </div>}
-
-
-            <span className='absolute right-0 sm:inline hidden'>
-
-                <Link to="/blogs" className='mx-2 px-1 hover:bg-gray-200 hover:bg-opacity-20 rounded-md '>Blogs</Link>
-
-                <Link to="/about" className='mx-2 px-1 hover:bg-gray-200 hover:bg-opacity-20 rounded-md '>About</Link>
-
-                <Link to="/contact" className='mx-2 px-1 hover:bg-gray-200 hover:bg-opacity-20 rounded-md '>Contact</Link>
+            <span className='header-nav'>
+                <Link to="/blogs" className='header-button'>Blog</Link>
+                <Link to="/about" className='header-button'>About</Link>
+                <Link to="/contact" className='header-button'>Contact</Link>
             </span>
-
-
-
         </header>
     )
 }

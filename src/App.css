@@ -2,37 +2,192 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-header {
+  position: relative;
+  color: aliceblue;
+  background-color: rgb(31, 41, 55);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4px 8px;
+  justify-content: space-between;
+  font-size: calc(4px + 2vmin);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.App-header img {
+  background-color: rgb(31, 41, 55);
+  width: 32px;
+  height: 32px;
+  position: relative;
+  display: inline;
+  border-radius: 16px;
+}
+
+.App-header h1 {
+  font-size: calc(10px + 2vmin);
+  padding: 0px 2px;
+  margin: 0px 2px;
+}
+
+.home-button {
+  background-color: inherit;
+  display: inline-flex;
+  align-items: center;
+  color: aliceblue;
+  border-radius: 16px;
+  padding: 0px 4px;
+  margin: 0px 2px;
+  text-decoration: none;
+}
+
+.smDrop {
+  width: 100%;
+  flex: none;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  background: inherit;
+}
+
+.header-ham {
+  font-size: calc(10px + 2vmin);
+  background-color: inherit;
+  color: aliceblue;
+  border: none;
+  border-radius: 16px;
+  padding: 0px 4px;
+  margin: 0px 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-ham:hover {
+  background-color: rgba(240, 248, 255, 0.1);
+}
+
+.header-button {
+  background-color: inherit;
+  color: aliceblue;
+  border-radius: 16px;
+  padding: 0 0.5rem;
+  margin: 0 0.25rem;
+  text-decoration: none;
+}
+
+.header-button:hover {
+  background-color: rgba(240, 248, 255, 0.1);
+}
+
+.header-nav {
+  flex: none;
+  position: absolute;
+  right: 10px;
+}
+
+@media (max-width:640px) {
+  .header-nav {
+    display: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (min-width:640px) {
+
+  .header-ham,
+  .smDrop {
+    display: none;
+  }
+}
+
+
+/* Blog Card------------------------------- */
+
+.card {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  max-width: 768px;
+  margin: 20px auto;
+  padding: 20px;
+  /* background-color:; */
+  border-radius: 8px;
+}
+
+.card .image {
+  flex: 0 0 20%;
+  max-width: 50%;
+  margin-right: 20px;
+}
+
+.card .image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.card .content {
+  flex: 1;
+}
+
+.card .title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card .text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.card:hover {
+  background-color: #f1f1f1;
+}
+
+
+/* Home Page ----------------------------------------------------------- */
+
+.title-Board {
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  display: flex;
+  max-width: 768px;
+  align-items: center;
+  justify-content: center;
+}
+.title-Board img{
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+}
+
+.title-text {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.button-box{
+  display: flex;
+  font-size: xx-large;
+  padding: 0.5rem;
+  margin: 0.5rem 2rem;
+  justify-content: space-around;
+  text-align: center;
+}
+.button-socials{
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
+.button-text{
+  /* text:small */
 
-.App-link {
-  color: #61dafb;
+  font-size: medium;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width:640px) {
+  .title-Board{
+    flex-direction: column;
   }
 }
