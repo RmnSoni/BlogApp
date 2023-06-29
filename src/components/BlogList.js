@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import BlogItem from './BlogItem';
 
-export default function BlogList({blogs}) {
+export default function BlogList({ blogs }) {
 
   return (
 
@@ -9,17 +10,10 @@ export default function BlogList({blogs}) {
 
       <h1 className="text-2xl font-bold mb-4">Blog Posts</h1>
       <div className="flex">
-        <ul className="flex flex-col w-4/5 items-center">
+        <ul className='bloglisting'>
 
           {blogs && blogs.map(post => (
-              <Link to={`/blogs/${post.id}`} key={"card"+post.id} className="card">
-                <div className="image" >
-                  <img src={post.photo} alt='blog img' className="" />
-                </div>
-                <div className="content">
-                  <h3 className="text-blue-950 hover:text-blue-700"> {post.title}</h3>
-                  <p>{post.description}</p></div>
-              </Link>
+            <li key={post.id}><BlogItem post={post} /> </li>
           ))}
         </ul>
 

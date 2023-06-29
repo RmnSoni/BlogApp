@@ -108,6 +108,9 @@ main{
 
 /* Blog Card------------------------------- */
 
+.bloglisting{
+  list-style-type: none;  
+}
 .card {
   display: flex;
   align-items: center;
@@ -115,6 +118,8 @@ main{
   max-width: 768px;
   margin: 20px auto;
   padding: 20px;
+  text-decoration: none;
+  color: inherit;
   /* background-color:; */
   border-radius: 8px;
 }
@@ -165,6 +170,14 @@ main{
 .naam{
   font-size: 3rem;
   margin: 0.25rem 0;
+}
+.doctorate{
+  font-size: large;
+  font-weight: 500;
+}
+.uni{
+  font-weight: 500;
+  color:#444444;
 }
 .title-Board img{
     width: 100%;
@@ -235,12 +248,17 @@ max-width: 80%;
 }
 
 
-
+/* Blog Listing-------------------------------- */
 
 
 
 
 /* Footer---------------------------------------- */
-footer{
-  background-color: slategray;
+footer{  
+  color: aliceblue;
+  background-color: rgb(31, 41, 55);
+}
+footer p {
+  margin:10px auto;
+  text-align: center;
 }
