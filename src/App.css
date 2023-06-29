@@ -1,5 +1,11 @@
-.App {
-  text-align: center;
+main{
+  flex-grow: 1;
+  padding: 1rem;
+}
+.sabsemain{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .App-header {
@@ -156,17 +162,21 @@
   align-items: center;
   justify-content: center;
 }
+.naam{
+  font-size: 3rem;
+  margin: 0.25rem 0;
+}
 .title-Board img{
-    width: 300px;
-    height: 300px;
+    width: 100%;
     border-radius: 150px;
 }
-
+.title-Board .image{
+  width: 30%;
+}
 .title-text {
   margin: 0.5rem;
   padding: 0.5rem;
 }
-
 .button-box{
   display: flex;
   font-size: xx-large;
@@ -176,18 +186,61 @@
   text-align: center;
 }
 .button-socials{
+  text-decoration: none;
+  color:inherit ;
   margin: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 1rem;
 }
 .button-text{
   /* text:small */
-
-  font-size: medium;
+  margin: 0;
+  opacity: 0%;
+  text-decoration: none;
+  font-size: large;
 }
+.button-socials:hover >.button-text{
+  opacity: 100%;
+}
+
+.bada-text{
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  max-width: 768px;
+}
+.main-content{
+  padding: 0 10px ;
+  align-items: center;
+}
+.main-content hr{
+max-width: 80%;
+}
+.section-title{
+  text-align: center;
+  font-size: x-large;
+  font-weight: 600;
+  margin-top: 4rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 @media (max-width:640px) {
   .title-Board{
     flex-direction: column;
+  }.button-text{
+    opacity: 100%;
   }
+}
+
+
+
+
+
+
+
+/* Footer---------------------------------------- */
+footer{
+  background-color: slategray;
 }
