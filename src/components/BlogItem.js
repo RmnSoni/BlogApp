@@ -29,8 +29,8 @@ export default function BlogItem({blog}){
     useEffect(()=>{
         const fetchMarkdownFile = async ()=>{
             // const response= await fetch('../assets/README.md');
-            //const response= await fetch(file);
-            const response= await fetch("https://firebasestorage.googleapis.com/v0/b/blog-app-5eedd.appspot.com/o/Electrical%20in%20UPSC.md?alt=media&token=aa1db388-2e45-4708-9dd8-6884cd79cd83");
+            const response= await fetch(file);
+            //const response= await fetch("https://firebasestorage.googleapis.com/v0/b/blog-app-5eedd.appspot.com/o/Electrical%20in%20UPSC.md?alt=media&token=aa1db388-2e45-4708-9dd8-6884cd79cd83");
             const text = await response.text();
             setMarkdowntext(text);
         };
