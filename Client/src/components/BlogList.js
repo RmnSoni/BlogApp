@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import BlogItem from './BlogItem';
 
 export default function BlogList({ blogs }) {
@@ -8,16 +7,15 @@ export default function BlogList({ blogs }) {
 
     <section className=" " >
 
-      <h1 className="text-2xl font-bold mb-4">Blog Posts</h1>
-      <div className="flex">
+      <h1 className="">Blog Posts</h1>
+      <div className="list-section">
         <ul className='bloglisting'>
-
           {blogs && blogs.map(post => (
             <li key={post.id}><BlogItem post={post} /> </li>
           ))}
         </ul>
 
-        <section className="flex-1 border-l">
+        <section className="sidebar">
           Isme side bar tags wagehra
         </section>
 

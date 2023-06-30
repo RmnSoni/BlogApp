@@ -6,33 +6,31 @@ import logo from '../assets/profile32x32.png'
 
 function Header() {
     const [showHam, setShowHam] = useState(false);
-
     function toggleMenu() {
         setShowHam(!showHam)
     }
 
+    function NavButtons() {
+        return (
+            <>
+                <Link to="/blogs" onClick={() => setShowHam(false)} className='header-button '>Blog</Link>
+                <Link to="/about" onClick={() => setShowHam(false)} className='header-button '>About</Link>
+                <Link to="/contact" onClick={() => setShowHam(false)} className='header-button'>Contact</Link>
+            </>
+        )
+    };
+
     return (
         <header className="App-header" >
-            <Link to="/" className='home-button inline-flex'>
-                <img src={logo} alt="Kushal's profile" className=''/>
+            <Link to="/" onClick={() => setShowHam(false)} className='home-button inline-flex'>
+                <img src={logo} alt="Kushal's profile" className='' />
                 <h1 className=''> Kushal Soni</h1>
             </Link>
             <button onClick={toggleMenu} className='header-ham'>
                 {showHam ? <IoMdClose /> : <GiHamburgerMenu />}
             </button>
-            {showHam &&
-                <div className='smDrop text-center'>
-                    <p><Link to="/blogs" onClick={toggleMenu} className='header-button '>Blog</Link></p>
-                    <p><Link to="/about" onClick={toggleMenu} className='header-button '>About</Link></p>
-                    <p><Link to="/contact" onClick={toggleMenu}  className='header-button'>Contact</Link></p>
-                </div>
-            }
-
-            <span className='header-nav'>
-                <Link to="/blogs" className='header-button'>Blog</Link>
-                <Link to="/about" className='header-button'>About</Link>
-                <Link to="/contact" className='header-button'>Contact</Link>
-            </span>
+            {showHam && <div className='smDrop'>{NavButtons()}</div>}
+            <span className='header-nav'>{NavButtons()}</span>
         </header>
     )
 }
