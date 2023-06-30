@@ -18,8 +18,7 @@ export default function Home({recentblog}) {
                     <div className='button-box'>
 
                         <a rel="noreferrer" target='_blank' href='https://www.linkedin.com/in/sonikushal/'
-                            className='button-socials'
-                        >   <FaLinkedin />
+                            className='button-socials'>   <FaLinkedin />
                             <p className='button-text'> LinkedIn </p></a>
 
                         <a rel="noreferrer" target='_blank' href='https://twitter.com/kushals_' className='button-socials'>
