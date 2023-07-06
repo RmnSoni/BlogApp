@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 
 
 function BlogItem({ post }) {
+
   return (
-    <Link to={`/blogs/${post.id}`} className="card">
+    <Link 
+    to={`/blogs/${post.id}`} 
+    className="card">
       <div className="image" >
         <img src={post.photo} alt='blog img' className="" />
       </div>

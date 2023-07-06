@@ -1,10 +1,10 @@
 export const blogs = [
-    {
-      id: 1,
-      title: "title of Blog",
-      description:"blog kla chota descrption",
-  
-      text: ` 
+  {
+    id: 1,
+    title: "title of Blog",
+    description: "blog kla chota descrption",
+
+    text: ` 
   # Fundamentals 
   
   dfja;slkjf;lk4  
@@ -28,13 +28,13 @@ export const blogs = [
   ## Ecosystem
   faltu para 1  
   Faltu Para 2`,
-      photo: "https://picsum.photos/200"
-    },
+    photo: "https://picsum.photos/200",
+  },
   {
     id: 2,
     title: "title of Blog2",
-    description:"blog ka lamba/chota descrption",
-  
+    description: "blog ka lamba/chota descrption",
+
     text: ` 
   # Fundamentals 
   
@@ -49,6 +49,6 @@ export const blogs = [
   ## Ecosystem
   faltu para 1  
   Faltu Para 2`,
-    photo: "https://picsum.photos/300"
-  }]
-  
+    photo: "https://picsum.photos/300",
+  },
+];

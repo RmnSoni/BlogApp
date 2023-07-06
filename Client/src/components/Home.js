@@ -4,7 +4,6 @@ import BlogItem from './BlogItem';
 
 export default function Home({recentblog}) {
 
-    console.log(recentblog)
     return (
         <div className="">
             <section className='title-Board'>

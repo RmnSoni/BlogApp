@@ -10,8 +10,8 @@ export default function BlogList({ blogs }) {
       <h1 className="">Blog Posts</h1>
       <div className="list-section">
         <ul className='bloglisting'>
-          {blogs && blogs.map(post => (
-            <li key={post.id}><BlogItem post={post} /> </li>
+          {blogs && blogs.map((post,i) => (
+            <li key={i}><BlogItem post={post} /> </li>
           ))}
         </ul>
 
