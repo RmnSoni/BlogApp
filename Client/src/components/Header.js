@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { IoMdClose } from 'react-icons/io';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
-import logo from '../assets/profile32x32.png'
+import logo from '../assets/logo-512x512.png'
 import './Header.css'
 function Header() {
     const [showHam, setShowHam] = useState(false);
@@ -13,9 +13,9 @@ function Header() {
     function NavButtons() {
         return (
             <>
-                <Link to="/blogs" onClick={() => setShowHam(false)} className='header-button '>Blog</Link>
-                <Link to="/about" onClick={() => setShowHam(false)} className='header-button '>About</Link>
-                <Link to="/contact" onClick={() => setShowHam(false)} className='header-button'>Contact</Link>
+                <Link to="/blogs" onClick={() => setShowHam(false)} className='header-button '>Blogs</Link>
+                {/* <Link to="/about" onClick={() => setShowHam(false)} className='header-button '>About</Link> */}
+                {/* <Link to="/contact" onClick={() => setShowHam(false)} className='header-button'>Contact</Link> */}
             </>
         )
     };

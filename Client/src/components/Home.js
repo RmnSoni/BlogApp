@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { FaEnvelope, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import BlogItem from './BlogItem';
 import './Home.css'
-// import { useCollectionData } from'react-firebase-hooks/firestore';
+import photu from '../assets/bhaisahabMainPhotu.jpg'
 import { firestore } from '../App';
 export default function Home() {
 
@@ -29,19 +29,20 @@ export default function Home() {
       }, []);
     
       const recentBlog = blogs[0];
-      console.log(recentBlog);
+
 
 
     return (
         <div className="">
             <section className='title-Board'>
                 <div className='image' >
-                    <img src="https://picsum.photos/300/300" alt='Kushals profile' className=' rounded-full' />
+                    <img src={photu} alt='Kushals profile' className=' rounded-full' />
                 </div>
                 <div className='title-text'>
                     <h1 className='naam '>Kushal Kumar Soni</h1>
                     <div className='doctorate'>Doctoral Scholar</div>
-                    <div className='uni'>Department of Political Science, University of Hyderabad </div>
+                    <div className='uni'>Department of Political Science,</div>
+                    <div className='doctorate' >University of Hyderabad </div>
                     <div className='button-box'>
 
                         <a rel="noreferrer" target='_blank' href='https://www.linkedin.com/in/sonikushal/'

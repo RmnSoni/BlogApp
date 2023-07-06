@@ -10,12 +10,13 @@ import BlogPage from "./components/BlogPage";
 // import { useEffect, useState } from "react";
 import EditPage from "./components/EditPage";
 
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
 //import {blogs} from './assets/tempblogs';
 
-import { useCollectionData } from 'react-firebase-hooks/firestore'
+import { useCollectionData } from "react-firebase-hooks/firestore";
+import Godpage from "./components/Godpage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDF17c6u1qUU54B_Exh0M-4pFJM1Qdhpag",
@@ -24,33 +25,43 @@ const firebaseConfig = {
   projectId: "blog-app-5eedd",
   storageBucket: "blog-app-5eedd.appspot.com",
   messagingSenderId: "258201273739",
-  appId: "1:258201273739:web:25639247412feb89d3db8e"
+  appId: "1:258201273739:web:25639247412feb89d3db8e",
 };
+
 const app = firebase.initializeApp(firebaseConfig);
 export const firestore = firebase.firestore(app);
+export const auth = firebase.auth(app);
 
 const App = () => {
-
   const blogsRef = firestore.collection("blogs");
-  const query = blogsRef.orderBy('createdAt','desc');
-  const [blogs] = useCollectionData(query, { idField: 'id' });
+  const query = blogsRef.orderBy("createdAt", "desc");
+  const [blogs] = useCollectionData(query, { idField: "id" });
   //console.log(blogs);
   return (
     <div className="sabsemain">
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<Home />} />
           <Route path="/blogs/*" element={<BlogList blogs={blogs} />} />
           <Route path="/contact" element={<Contacts />} />
-          <Route path="/about" element={<About />} />
-          <Route path='/god/editpage' element={<EditPage />} />
+          <Route path="/about" element={<About />} />\
+          <Route path="/god" element={<Godpage blogs={blogs} />} />
+          <Route path="/god/editpage" element={<EditPage />} />
           {blogs &&
-            blogs.map((post,i) => (
+            blogs.map((post, i) => (
               <Route
                 key={i}
                 path={`/blogs/${post.id}`}
                 element={<BlogPage blog={post} />}
+              />
+            ))}
+          {blogs &&
+            blogs.map((post, i) => (
+              <Route
+                key={i}
+                path={`/god/editpage/${post.id}`}
+                element={<EditPage blog={post} />}
               />
             ))}
         </Routes>

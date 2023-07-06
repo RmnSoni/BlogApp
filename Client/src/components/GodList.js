@@ -1,18 +1,17 @@
 import React from 'react'
-import BlogItem from './BlogItem';
+import GodItem from './GodItem';
 
-export default function BlogList({ blogs }) {
+export default function GodList( {blogs}) {
 
   return (
 
     <section className=" " >
 
-      <h1 className="route-heading">Blog Posts</h1>
-      <hr className='route-divider'/>
+      <h1 className="">Blog Posts</h1>
       <div className="list-section">
         <ul className='bloglisting'>
           {blogs && blogs.map((post,i) => (
-            <li key={i}><BlogItem post={post} /> </li>
+            <li key={i}><GodItem post={post} /> </li>
           ))}
         </ul>
 
