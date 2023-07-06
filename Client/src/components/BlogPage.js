@@ -4,7 +4,7 @@ import React, { useEffect, useState }  from 'react';
 import Markdown from 'react-markdown';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/storage'
-
+import './BlogPage.css';
 export default function BlogPage({blog}){
     const [fileContent, setFileContent] = useState('');
 
@@ -34,11 +34,14 @@ export default function BlogPage({blog}){
 
     return (
     <div className='blog-page'>
+      <div className='banner'>
+        <img src='https://picsum.photos/1000/500' alt='blog main'/>
         <h1 className='text-4xl my-2'>
             {blog.title}
         </h1>
+      </div>
         {/* <p>{blog.createdAt}</p> */}
-        <div className=''>            
+        <div className='blog-text'>            
             <Markdown>{fileContent}</Markdown>
         </div>
     </div>

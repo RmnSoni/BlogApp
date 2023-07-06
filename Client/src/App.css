@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body{
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
 main{
   flex-grow: 1;
   padding: 1rem;
@@ -7,92 +13,6 @@ main{
   flex-direction: column;
   min-height: 100vh;
 }
-.App-header {
-  position: relative;
-  color: aliceblue;
-  background-color: rgb(31, 41, 55);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 4px 8px;
-  justify-content: space-between;
-  font-size: calc(4px + 2vmin);
-}
-.App-header img {
-  background-color: rgb(31, 41, 55);
-  width: 32px;
-  height: 32px;
-  position: relative;
-  display: inline;
-  border-radius: 16px;
-}
-.App-header h1 {
-  font-size: calc(10px + 2vmin);
-  padding: 0px 2px;
-  margin: 0px 2px;
-}
-.home-button {
-  background-color: inherit;
-  display: inline-flex;
-  align-items: center;
-  color: aliceblue;
-  border-radius: 16px;
-  padding: 0px 4px;
-  margin: 0px 2px;
-  text-decoration: none;
-}
-.smDrop {
-  width: 100%;
-  flex: none;
-  flex-direction: column;
-  display: flex;
-  text-align: center;
-  background: inherit;
-}
-.header-ham {
-  font-size: calc(10px + 2vmin);
-  background-color: inherit;
-  color: aliceblue;
-  border: none;
-  border-radius: 16px;
-  padding: 0px 4px;
-  margin: 0px 8px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-}
-.header-ham:hover {
-  background-color: rgba(240, 248, 255, 0.1);
-}
-.header-button {
-  background-color: inherit;
-  color: aliceblue;
-  border-radius: 16px;
-  padding: 0 0.5rem;
-  margin: 0 0.25rem;
-  text-decoration: none;
-}
-.header-button:hover {
-  background-color: rgba(240, 248, 255, 0.1);
-}
-.header-nav {
-  flex: none;
-  position: absolute;
-  right: 10px;
-}
-@media (max-width:640px) {
-  .header-nav {
-    display: none;
-  }
-}
-@media (min-width:640px) {
-
-  .header-ham,
-  .smDrop {
-    display: none;
-  }
-}
-
 
 
 /* Blog List --------------------------------------------- */
@@ -158,99 +78,6 @@ main{
 }
 
 
-/* Home Page ----------------------------------------------------------- */
-
-.title-Board {
-  margin: 0.5rem auto;
-  padding: 0.5rem;
-  display: flex;
-  max-width: 768px;
-  align-items: center;
-  justify-content: center;
-}
-.naam{
-  font-size: 3rem;
-  margin: 0.25rem 0;
-}
-.doctorate{
-  font-size: large;
-  font-weight: 500;
-}
-.uni{
-  font-weight: 500;
-  color:#444444;
-}
-.title-Board img{
-    width: 100%;
-    border-radius: 150px;
-}
-.title-Board .image{
-  width: 30%;
-}
-.title-text {
-  margin: 0.5rem;
-  padding: 0.5rem;
-}
-.button-box{
-  display: flex;
-  font-size: xx-large;
-  padding: 0.5rem;
-  margin: 0.5rem 2rem;
-  justify-content: space-around;
-  text-align: center;
-}
-.button-socials{
-  text-decoration: none;
-  color:inherit ;
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 1rem;
-}
-.button-text{
-  /* text:small */
-  margin: 0;
-  opacity: 0%;
-  text-decoration: none;
-  font-size: large;
-}
-.button-socials:hover >.button-text{
-  opacity: 100%;
-}
-.bada-text{
-  margin: 0.5rem auto;
-  padding: 0.5rem;
-  max-width: 768px;
-}
-.main-content{
-  padding: 0 10px ;
-  align-items: center;
-}
-.main-content hr{
-max-width: 80%;
-}
-.section-title{
-  text-align: center;
-  font-size: x-large;
-  font-weight: 600;
-  margin-top: 4rem;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (max-width:640px) {
-  .title-Board{
-    flex-direction: column;
-  }.button-text{
-    opacity: 100%;
-  }.header-button{
-    margin:0 auto;
-    padding: 0.25em;
-    max-width: 50%;
-  }
-}
-
 
 /* Form---------------------------------------------- */
 
@@ -283,4 +110,8 @@ footer{
 footer p {
   margin:10px auto;
   text-align: center;
+}
+footer a{
+  color: aliceblue;
+  text-decoration: none;
 }

@@ -7,7 +7,7 @@ export default function Footers() {
 
             <div className="container mx-auto text-center">
 
-                <p>&copy; {new Date().getFullYear()} Your Website. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} <a href='https://kushalsoni.in'>kushalsoni.in</a> | All rights reserved.</p>
                 
             </div>
 

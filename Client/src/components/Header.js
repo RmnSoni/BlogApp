@@ -3,7 +3,7 @@ import { IoMdClose } from 'react-icons/io';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import logo from '../assets/profile32x32.png'
-
+import './Header.css'
 function Header() {
     const [showHam, setShowHam] = useState(false);
     function toggleMenu() {

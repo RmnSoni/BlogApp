@@ -1,8 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaEnvelope, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import BlogItem from './BlogItem';
+import './Home.css'
+// import { useCollectionData } from'react-firebase-hooks/firestore';
+import { firestore } from '../App';
+export default function Home() {
 
-export default function Home({recentblog}) {
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() => {
+        const fetchLatestBlog = async () => {
+          const blogsRef = firestore.collection('blogs');
+          const query = blogsRef.orderBy('createdAt', 'desc').limit(1);
+          
+          try {
+            const querySnapshot = await query.get();
+            const latestBlog = querySnapshot.docs.map((doc) => ({
+              id: doc.id,
+              ...doc.data(),
+            }));
+            setBlogs(latestBlog);
+          } catch (error) {
+            console.error('Error fetching latest blog:', error);
+          }
+        };
+    
+        fetchLatestBlog();
+      }, []);
+    
+      const recentBlog = blogs[0];
+      console.log(recentBlog);
+
 
     return (
         <div className="">
@@ -40,10 +68,14 @@ export default function Home({recentblog}) {
                     </article>
                 </section>
                 <hr />
+
+
                 <section>
                     <h2 className='section-title'> Latest Writing </h2>
 
-                    <BlogItem post={recentblog} />
+                    <BlogItem post={recentBlog} />
+                
+                
                 </section>
             </div>
 

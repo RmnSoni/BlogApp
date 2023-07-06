@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 function BlogItem({ post }) {
-
+  if(post==null) return <div className='card'></div>
   return (
     <Link 
     to={`/blogs/${post.id}`} 

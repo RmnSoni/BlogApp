@@ -27,20 +27,20 @@ const firebaseConfig = {
   appId: "1:258201273739:web:25639247412feb89d3db8e"
 };
 const app = firebase.initializeApp(firebaseConfig);
-const firestore = firebase.firestore(app);
+export const firestore = firebase.firestore(app);
 
 const App = () => {
 
   const blogsRef = firestore.collection("blogs");
-  const query = blogsRef.orderBy('createdAt').limit(25);
+  const query = blogsRef.orderBy('createdAt','desc');
   const [blogs] = useCollectionData(query, { idField: 'id' });
-  console.log(blogs)
+  //console.log(blogs);
   return (
     <div className="sabsemain">
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Home recentblog={blogs} />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/blogs/*" element={<BlogList blogs={blogs} />} />
           <Route path="/contact" element={<Contacts />} />
           <Route path="/about" element={<About />} />
