@@ -19,13 +19,13 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 import Godpage from "./components/Godpage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDF17c6u1qUU54B_Exh0M-4pFJM1Qdhpag",
-  authDomain: "blog-app-5eedd.firebaseapp.com",
-  databaseURL: "https://blog-app-5eedd-default-rtdb.firebaseio.com",
-  projectId: "blog-app-5eedd",
-  storageBucket: "blog-app-5eedd.appspot.com",
-  messagingSenderId: "258201273739",
-  appId: "1:258201273739:web:25639247412feb89d3db8e",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain:process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL:process.env.REACT_APP_FIREBASE_DB_URL,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
 const app = firebase.initializeApp(firebaseConfig);
